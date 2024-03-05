@@ -27,7 +27,7 @@ export default function App() {
         <div className="today-details">
           <h2>
             <img src={wheatherData.iconUrl} className="icon" alt="" />{" "}
-            {wheatherData.temperature}° <a href="#">C</a> |<a href="#">F</a>
+            {wheatherData.temperature}° <a href="/">C</a> |<a href="/">F</a>
           </h2>
           <div className="humidityDetails">
             Humidity: {wheatherData.humidity}%

@@ -24,22 +24,27 @@ export default function App() {
             <input type="submit" value="Search" className="searchButton" />
           </form>
         </header>
-        <div className="today-details">
-          <h2>
-            <img src={wheatherData.iconUrl} className="icon" alt="" />{" "}
-            {wheatherData.temperature}° <a href="/">C</a> |<a href="/">F</a>
-          </h2>
-          <div className="humidityDetails">
-            Humidity: {wheatherData.humidity}%
+        <div className="container main-section-container">
+          <div className="row">
+            <div className="col">
+              <h1>{wheatherData.city}</h1>
+              <div className="h2Subtitle">Weather for today</div>
+              <div>{wheatherData.date}</div>
+              <div>{wheatherData.time}</div>
+            </div>
+            <div className="col">
+              <h2>
+                <img src={wheatherData.iconUrl} className="icon" alt="" />{" "}
+                {wheatherData.temperature}° <a href="/">C</a> |<a href="/">F</a>
+              </h2>
+              <div className="humidityDetails">
+                Humidity: {wheatherData.humidity}%
+              </div>
+              <div className="windDetails">Wind: {wheatherData.wind} km/h</div>
+            </div>
           </div>
-          <div className="windDetails">Wind: {wheatherData.wind} km/h</div>
         </div>
-        <div className="weatherForecastMainSection">
-          <h1>{wheatherData.city}</h1>
-          <div className="h2Subtitle">Weather for today</div>
-          <div>{wheatherData.date}</div>
-          <div>{wheatherData.time}</div>
-        </div>
+
         <div className="container" id="extended-forecast">
           <h4 className="text-center">Extended Weather Forecast</h4>
           <div className="row">

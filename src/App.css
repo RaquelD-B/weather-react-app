@@ -53,17 +53,11 @@ form {
   margin-left: 20px;
   margin-right: 20px;
 }
-.today-details {
-  position: relative;
-  top: 44px;
+h2 {
+  font-size: 23px;
+  font-weight: 700px;
 }
-.weatherForecastMainSection {
-  display: block;
-  position: relative;
-  text-align: right;
-  top: -103px;
-}
-#extended-forecast {
-  position: relative;
-  bottom: 40px;
+.main-section-container {
+  margin-top: 40px;
+  margin-bottom: 40px;
 }

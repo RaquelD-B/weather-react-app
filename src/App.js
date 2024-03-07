@@ -77,6 +77,11 @@ export default function App() {
           </div>
         </div>
       </div>
+      <p className="text-center">
+        {" "}
+        This project was coded by Raquel Diaz and is on{" "}
+        <a href="https://github.com/RaquelD-B/weather-react-app">Github</a>
+      </p>
     </div>
   );
 }

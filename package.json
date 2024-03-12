@@ -9,6 +9,7 @@
     "boostrap": "^2.0.0",
     "bootstrap": "^4.0.0-alpha.6",
     "react": "^18.2.0",
+    "react-animated-weather": "^4.0.1",
     "react-axios": "^2.0.6",
     "react-bootstrap": "^0.32.1",
     "react-dom": "^18.2.0",

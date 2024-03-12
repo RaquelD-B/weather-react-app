@@ -26,7 +26,7 @@ export default function App(props) {
       humidity: response.data.main.humidity,
       wind: response.data.wind.speed,
       description: response.data.weather[0].description,
-      iconUrl: "https://ssl.gstatic.com/onebox/weather/64/cloudy.png",
+      iconUrl: `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
       date: new Date(response.data.dt * 1000),
       city: response.data.name,
     });
@@ -51,7 +51,6 @@ export default function App(props) {
           <div className="container main-section-container">
             <WeatherData data={weather} />
           </div>
-
           <div className="container" id="extended-forecast">
             <h4 className="text-center">Extended Weather Forecast</h4>
             <div className="row">
@@ -91,6 +90,10 @@ export default function App(props) {
       </div>
     );
   } else {
+    let apiKey = "6643c7326a4c2a38838264a28531d97e";
+    let unit = "metric";
+    let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${unit}`;
+    axios.get(url).then(displayWeather);
     return <p className="text-center">Loading</p>;
   }
 }

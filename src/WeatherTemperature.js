@@ -4,7 +4,7 @@ import "./WeatherTemperature.css";
 
 export default function WeatherTemperature(props) {
   const [unit, setUnit] = useState("celsius");
-  const [temperature, setTemperature] = useState(props.celsius);
+
   let fahrenheitTemp = Math.round((props.celsius * 9) / 5 + 32);
   function showFahrenheit(event) {
     event.preventDefault();
@@ -34,7 +34,7 @@ export default function WeatherTemperature(props) {
   } else {
     return (
       <span>
-        <span className="temp">{temperature} </span>{" "}
+        <span className="temp">{props.celsius} </span>{" "}
         <span className="tempUnit">
           <a href="/" onClick={showCelsius}>
             °C

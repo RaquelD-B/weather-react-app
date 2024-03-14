@@ -3,6 +3,7 @@ import React from "react";
 import axios from "axios";
 import { useState } from "react";
 import WeatherData from "./WeatherData";
+import WeatherForecast from "./WeatherForecast";
 
 export default function App(props) {
   const [weather, setWeather] = useState({});
@@ -48,45 +49,17 @@ export default function App(props) {
               <input type="submit" value="Search" className="searchButton" />
             </form>
           </header>
-          <div className="container main-section-container">
-            <WeatherData data={weather} />
-          </div>
-          <div className="container" id="extended-forecast">
-            <h4 className="text-center">Extended Weather Forecast</h4>
-            <div className="row">
-              <div className="col">
-                {" "}
-                <div> Mon</div>🌧️
-                <div> 9°</div>
-              </div>
-              <div className="col">
-                {" "}
-                <div> Mon</div>🌧️
-                <div> 9°</div>
-              </div>
-              <div className="col">
-                {" "}
-                <div> Mon</div>🌧️
-                <div> 9°</div>
-              </div>
-              <div className="col">
-                {" "}
-                <div> Mon</div>🌧️
-                <div> 9°</div>
-              </div>
-              <div className="col">
-                {" "}
-                <div> Mon</div>🌧️
-                <div> 9°</div>
-              </div>
-            </div>
-          </div>
+
+          <WeatherData data={weather} />
+
+          <WeatherForecast />
+
+          <p className="text-center">
+            {" "}
+            This project was coded by Raquel Diaz and is on{" "}
+            <a href="https://github.com/RaquelD-B/weather-react-app">Github</a>
+          </p>
         </div>
-        <p className="text-center">
-          {" "}
-          This project was coded by Raquel Diaz and is on{" "}
-          <a href="https://github.com/RaquelD-B/weather-react-app">Github</a>
-        </p>
       </div>
     );
   } else {

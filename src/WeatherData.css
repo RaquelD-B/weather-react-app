@@ -1,3 +1,25 @@
-h1 {
+.title,
+.title-2 {
   font-size: 30px;
+}
+
+.title-2 {
+  position: relative;
+  right: -43px;
+}
+.WeatherData {
+  margin: 30px 0;
+}
+.weather-general-details,
+.weather-general-details-2 {
+  opacity: 0.8;
+}
+.weather-general-details-2 {
+  position: relative;
+  bottom: 12px;
+  text-align: end;
+}
+.main-icon {
+  position: relative;
+  bottom: 10px;
 }

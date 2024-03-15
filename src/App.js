@@ -8,7 +8,7 @@ import WeatherForecast from "./WeatherForecast";
 export default function App(props) {
   const [weather, setWeather] = useState({});
   const [details, setDetails] = useState(false);
-  const [city, setCity] = useState(props.city);
+  const [city, setCity] = useState(props.defaultCity);
 
   function handleCity(event) {
     setCity(event.target.value);
@@ -52,7 +52,7 @@ export default function App(props) {
 
           <WeatherData data={weather} />
 
-          <WeatherForecast />
+          <WeatherForecast city={weather.city} />
 
           <p className="text-center">
             {" "}

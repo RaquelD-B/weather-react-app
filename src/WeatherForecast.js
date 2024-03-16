@@ -1,12 +1,15 @@
 import React from "react";
 import "./WeatherForecast.css";
 import axios from "axios";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import DailyForecast from "./DailyForecast";
 
 export default function WeatherForecast(props) {
   const [forecast, setForecast] = useState(null);
   const [ready, setReady] = useState(false);
+  useEffect(() => {
+    setReady(false);
+  }, [props.city]);
 
   function handleResponse(response) {
     setReady(true);

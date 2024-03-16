@@ -13,12 +13,15 @@ export default function App(props) {
   function handleCity(event) {
     setCity(event.target.value);
   }
-  function handleSubmit(event) {
-    event.preventDefault();
+  function searchCity() {
     let apiKey = "6643c7326a4c2a38838264a28531d97e";
     let unit = "metric";
     let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${unit}`;
     axios.get(url).then(displayWeather);
+  }
+  function handleSubmit(event) {
+    event.preventDefault();
+    searchCity();
   }
   function displayWeather(response) {
     setDetails(true);
@@ -49,11 +52,8 @@ export default function App(props) {
               <input type="submit" value="Search" className="searchButton" />
             </form>
           </header>
-
           <WeatherData data={weather} />
-
-          <WeatherForecast city={weather.city} />
-
+          <WeatherForecast city={city} />
           <p className="text-center">
             {" "}
             This project was coded by Raquel Diaz and is on{" "}
@@ -63,10 +63,7 @@ export default function App(props) {
       </div>
     );
   } else {
-    let apiKey = "6643c7326a4c2a38838264a28531d97e";
-    let unit = "metric";
-    let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${unit}`;
-    axios.get(url).then(displayWeather);
+    searchCity();
     return <p className="text-center">Loading</p>;
   }
 }

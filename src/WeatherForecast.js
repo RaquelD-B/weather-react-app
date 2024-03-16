@@ -6,26 +6,34 @@ import DailyForecast from "./DailyForecast";
 
 export default function WeatherForecast(props) {
   const [forecast, setForecast] = useState(null);
-  const [city, setCity] = useState(props.city);
+  const [ready, setReady] = useState(false);
 
   function handleResponse(response) {
-    setForecast({
-      day: response.data.daily[0].time,
-      maxTemp: response.data.daily[0].temperature.maximum,
-      minTemp: response.data.daily[0].temperature.minimum,
-      icon: response.data.daily[0].condition.icon,
-    });
+    setReady(true);
+    setForecast(response.data.daily);
   }
-  if (forecast) {
+  if (ready) {
     return (
       <div className="WeatherForecast">
-        <DailyForecast data={forecast} />
+        <h5>Extended Forecast</h5>
+        <div className="row">
+          {forecast.map(function (dailyforecast, index) {
+            if (index < 5) {
+              return (
+                <div className="col" key={index}>
+                  {" "}
+                  <DailyForecast data={dailyforecast} />
+                </div>
+              );
+            }
+          })}
+        </div>
       </div>
     );
   } else {
-    let city = { city };
     let apiKey = "adf0eeed55ed6d4256b9b3ft0e49cc9o";
-    let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}&units=metric`;
+    let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${props.city}&key=${apiKey}&units=metric`;
     axios.get(apiUrl).then(handleResponse);
+    return "Loading extended forecast...";
   }
 }

@@ -54,11 +54,6 @@ export default function App(props) {
           </header>
           <WeatherData data={weather} />
           <WeatherForecast city={city} />
-          <p className="text-center">
-            {" "}
-            This project was coded by Raquel Diaz and is on{" "}
-            <a href="https://github.com/RaquelD-B/weather-react-app">Github</a>
-          </p>
         </div>
       </div>
     );

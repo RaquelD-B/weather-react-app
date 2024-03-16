@@ -7,6 +7,11 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <App defaultCity="Asuncion" />
+    <p className="text-center">
+      {" "}
+      This project was coded by Raquel Diaz and is on{" "}
+      <a href="https://github.com/RaquelD-B/weather-react-app">Github</a>
+    </p>
   </React.StrictMode>
 );
 

@@ -5,3 +5,6 @@
 .forecast-min-temp {
   opacity: 0.7;
 }
+.forecast-min-temp {
+  font-size: 12px;
+}

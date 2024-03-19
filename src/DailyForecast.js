@@ -3,7 +3,7 @@ import WeatherIcon from "./WeatherIcon";
 
 export default function DailyForecast(props) {
   let date = new Date(props.data.time * 1000);
-  let days = ["Sun", "Mon", "Tue", "Wed", "Tue", "Fri", "Sat"];
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
   let day = days[date.getDay()];
   let maxTemp = Math.round(props.data.temperature.maximum);
   let minTemp = Math.round(props.data.temperature.minimum);

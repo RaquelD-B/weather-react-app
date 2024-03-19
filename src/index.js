@@ -9,8 +9,10 @@ root.render(
     <App defaultCity="Asuncion" />
     <p className="text-center">
       {" "}
-      This project was coded by Raquel Diaz and is on{" "}
-      <a href="https://github.com/RaquelD-B/weather-react-app">Github</a>
+      This project was coded by Raquel Diaz, is open-sourced on{" "}
+      <a href="https://github.com/RaquelD-B/weather-react-app">Github</a> and
+      hosted on{" "}
+      <a href="https://react-weatherapp-by-raquel.netlify.app/">Netlify</a>
     </p>
   </React.StrictMode>
 );

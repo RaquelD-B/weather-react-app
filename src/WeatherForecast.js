@@ -7,6 +7,7 @@ import DailyForecast from "./DailyForecast";
 export default function WeatherForecast(props) {
   const [forecast, setForecast] = useState(null);
   const [ready, setReady] = useState(false);
+
   useEffect(() => {
     setReady(false);
   }, [props.city]);
@@ -20,7 +21,7 @@ export default function WeatherForecast(props) {
       <div className="WeatherForecast">
         <h5 className="mb-3">Extended Weather Forecast</h5>
         <div className="row">
-          {forecast.map(function (dailyforecast, index) {
+          {forecast?.map(function (dailyforecast, index) {
             if (index < 5) {
               return (
                 <div className="col" key={index}>

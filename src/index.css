@@ -1,0 +1,22 @@
+body {
+  background: linear-gradient(
+    #002f63,
+    #013b6e,
+    #2a5985,
+    #446c8e,
+    #74848c,
+    #999081,
+    #b28962,
+    #b65a33,
+    #de6f34
+  );
+}
+
+p a {
+  text-decoration: underline;
+  color: white;
+}
+p,
+a {
+  font-size: 12px;
+}

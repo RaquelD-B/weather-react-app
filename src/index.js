@@ -14,16 +14,9 @@ root.render(
       <a href="https://github.com/RaquelD-B">Raquel Díaz</a>{" "}
       <div>
         It is open-sourced on{" "}
-        <a href="https://github.com/RaquelD-B/weather-react-app" target="blank">
-          Github
-        </a>{" "}
-        and hosted on{" "}
-        <a
-          href="https://react-weatherapp-by-raquel.netlify.app/"
-          target="blank"
-        >
-          Netlify
-        </a>
+        <a href="https://github.com/RaquelD-B/weather-react-app">Github</a> and
+        hosted on{" "}
+        <a href="https://react-weatherapp-by-raquel.netlify.app/">Netlify</a>
       </div>
     </p>
   </React.StrictMode>

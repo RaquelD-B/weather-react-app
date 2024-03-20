@@ -10,6 +10,7 @@ body {
     #b65a33,
     #de6f34
   );
+  min-height: 100vh;
 }
 
 p a {

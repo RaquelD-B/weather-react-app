@@ -12,7 +12,6 @@ export default function App(props) {
 
   function handleCity(event) {
     setCity(event.target.value);
-    console.log(city);
   }
   function searchCity() {
     let apiKey = "6643c7326a4c2a38838264a28531d97e";

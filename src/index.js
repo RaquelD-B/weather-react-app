@@ -11,10 +11,10 @@ root.render(
     <p className="text-center">
       {" "}
       This project was coded by{" "}
-      <a href="https://github.com/RaquelD-B">Raquel Díaz</a>{" "}
+      <a href="https://github.com/RaquelD-B">Raquel Díaz</a>.{" "}
       <div>
-        It is open-sourced on{" "}
-        <a href="https://github.com/RaquelD-B/weather-react-app">Github</a> and
+        It is open source on{" "}
+        <a href="https://github.com/RaquelD-B/weather-react-app">GitHub</a> and
         hosted on{" "}
         <a href="https://react-weatherapp-by-raquel.netlify.app/">Netlify</a>
       </div>
